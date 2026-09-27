@@ -2,10 +2,23 @@
     box-sizing: border-box;
 }
 
+html, body, #joplin-plugin-content {
+    overflow: hidden;
+}
+
 /* A minimum width keeps the dialog usable on desktop, while the maximum stops it overflowing a narrow phone screen */
 #joplin-plugin-content {
     min-width: min(300px, 100%);
     max-width: 100%;
+}
+
+#editor-scroll-container {
+    position: fixed;
+    inset: 0;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 fieldset {

@@ -17,6 +17,7 @@ var editButtons = [{title: "Cancel", id: "cancel"}, {title: "Delete", id: "delet
  ***************************************************************************************************************************************************/
 export async function setupEditor(){
     dialog = await joplin.views.dialogs.create('editor');
+    await joplin.views.dialogs.setFitToContent(dialog, false)
     await joplin.views.dialogs.addScript(dialog, '/ui/editor/editorWebview.js')
     await joplin.views.dialogs.addScript(dialog, '/ui/editor/editor.css')
 }

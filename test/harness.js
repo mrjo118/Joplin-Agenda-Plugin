@@ -12,6 +12,7 @@ function makeJoplin(options) {
         registeredSettings: null,
         panels: [],
         dialogs: [],
+        dialogFitToContent: {},
         panelHtml: {},
         panelScripts: [],
         toolbarButtons: [],
@@ -71,6 +72,7 @@ function makeJoplin(options) {
             dialogs: {
                 create: async (id) => { state.dialogs.push(id); return `dialog-${id}` },
                 addScript: async () => {},
+                setFitToContent: async (handle, status) => { state.dialogFitToContent[handle] = status },
                 setHtml: async () => {},
                 setButtons: async () => {},
                 open: async () => state.dialogResult || { id: 'cancel' },

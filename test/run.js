@@ -127,6 +127,9 @@ async function main() {
         assert.strictEqual(desktop.toolbarButtons[0].location, 'noteToolbar')
         assert.strictEqual(desktop.menus.length, 1)
     })
+    await test('desktop: the profile editor uses Joplin viewport sizing', () => {
+        assert.strictEqual(desktop.dialogFitToContent['dialog-editor'], false)
+    })
     await test('desktop: no mobile-only heading buttons', () => {
         const html = desktop.panelHtml['panel-panel']
         assert.ok(!html.includes('onStylerClicked()'), 'styler button should be desktop-menu only')

@@ -4,6 +4,7 @@
  ***************************************************************************************************************************************************/
 
 export var editorTemplate = `
+    <div id="editor-scroll-container">
     <fieldset>
         <legend>Name</legend>
         <input type="text" id="nameInput" name="name" value="New Profile">
@@ -112,4 +113,5 @@ export var editorTemplate = `
     <form name="profileDataForm">
         <input type="hidden" id="profileDataInput" name="profileData" value="<<PROFILE_DATA>>">
     </form>
+    </div>
 `
